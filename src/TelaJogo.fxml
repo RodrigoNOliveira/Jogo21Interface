@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaJogoController">
+   <children>
+      <AnchorPane prefHeight="680.0" prefWidth="995.0">
+         <children>
+            <ImageView fitHeight="680.0" fitWidth="995.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/fundo.jpg" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="botaoMultiplayer" layoutX="395.0" layoutY="302.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="273.0" selected="true" text="MULTIPLAYER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="opcoesModo" />
+               </toggleGroup>
+            </RadioButton>
+            <Label fx:id="msgSelecModo" alignment="CENTER" layoutX="225.0" layoutY="101.0" prefHeight="112.0" prefWidth="596.0" text="MODO DE JOGO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Label>
+            <Button fx:id="botaoComecar" layoutX="420.0" layoutY="485.0" mnemonicParsing="false" onAction="#iniciarTudo" prefHeight="75.0" prefWidth="178.0" text="INICIAR">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="botaoComprar" disable="true" layoutX="820.0" layoutY="127.0" mnemonicParsing="false" onAction="#comprarCarta" prefHeight="211.0" prefWidth="164.0" style="-fx-background-radius: 25px; -fx-background-image: url(/imagens/baralhoFundo.png); -fx-background-size: 164px, 211px;" visible="false">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <graphic>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-width: 2;" text="COMPRAR">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="botaoNaoComprar" disable="true" layoutX="820.0" layoutY="364.0" mnemonicParsing="false" onAction="#naoComprar" prefHeight="50.0" prefWidth="164.0" text="NÃO COMPRAR" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="carta1" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="50.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="carta2" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="200.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="carta3" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="350.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="carta4" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="500.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="carta5" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="650.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="cartaOponente1" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@imagens/baralhoFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaOponente2" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="200.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@imagens/baralhoFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaOponente3" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="350.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@imagens/baralhoFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaOponente4" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="500.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@imagens/baralhoFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaOponente5" disable="true" fitHeight="197.0" fitWidth="173.0" layoutX="650.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@imagens/baralhoFundo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelRodada" layoutX="65.0" layoutY="255.0" prefHeight="68.0" prefWidth="168.0" text="RODADA:" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelJogador" layoutX="65.0" layoutY="310.0" prefHeight="68.0" prefWidth="168.0" text="JOGADOR:" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNmrRodada" alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="255.0" prefHeight="68.0" prefWidth="33.0" text="0" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNmrJgdr" alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="310.0" prefHeight="68.0" prefWidth="33.0" text="0" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="jogarNovamente" layoutX="750.0" layoutY="277.0" mnemonicParsing="false" onAction="#botaoJogarNovamente" prefHeight="25.0" prefWidth="220.0" text="JOGAR NOVAMENTE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="botaoSair" layoutX="750.0" layoutY="350.0" mnemonicParsing="false" onAction="#botaoSairJogo" prefHeight="25.0" prefWidth="220.0" text="SAIR DO JOGO" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelJogador2" layoutX="5.0" layoutY="2.0" prefHeight="68.0" prefWidth="168.0" text="JOGADOR 2:" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelJogador1" layoutX="5.0" layoutY="360.0" prefHeight="68.0" prefWidth="168.0" text="JOGADOR 1:" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
